@@ -1,0 +1,211 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #cbdbe9;
+}
+
+/* ===== NAV BAR ===== */
+nav {
+  background: #c1db1b;
+  color: #fff;
+  padding: 15px;
+  font-size: 20px;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card,
+.result {
+  background: #fff;
+  padding: 25px;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* ===== INPUTS ===== */
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #0a1f44;
+}
+
+/* ===== BUTTON ===== */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #0a1f44;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2b8042;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== RESULT BOXES (FIXED & POLISHED) ===== */
+
+.approved-box {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  border: 2px solid #2e7d32;
+  color: #1b5e20;
+
+  padding: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+
+  border-radius: 8px;
+  animation: fadeIn 0.6s;
+}
+
+.blocked-box {
+  background: linear-gradient(135deg, #fdecea, #f8c1bd);
+  border: 2px solid #c62828;
+  color: #8e0000;
+
+  padding: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+
+  border-radius: 8px;
+  animation: shake 0.4s;
+}
+
+/* ===== INPUT ERRORS ===== */
+
+.input-error {
+  background: #fff8e1;
+  border-left: 6px solid #f9a825;
+  padding: 15px;
+  font-weight: bold;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ===== SCROLLING BANK NAV TEXT ===== */
+.scroll-nav {
+  background: #0a1f44;
+  color: white;
+  padding: 15px 0;
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scroll-nav span {
+  display: inline-block;
+  animation: scrollText 25s linear infinite;
+}
+
+/* LEFT → RIGHT, proper loop */
+@keyframes scrollText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+/* ===== WELCOME PAGE ===== */
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+.welcome-card {
+  background: white;
+  padding: 40px;
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(58, 0, 248, 0.15);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.welcome-card h1 {
+  margin-bottom: 10px;
+  color: #0a1f44;
+}
+
+.tagline {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.features li {
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.welcome-card button {
+  padding: 12px 20px;
+  background: #0a1f44;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.welcome-card button:hover {
+  background: #378141;
+}
+
+/* ===== END WELCOME PAGE ===== */
