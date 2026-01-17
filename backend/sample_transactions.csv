@@ -1,4 +1,4 @@
 transaction_id,amount,merchant,location
-TXN001 ,5000,Amazon,Hyderabad
+TXN001,5000,Amazon,Hyderabad
 TXN002,35000,Flipkart,Delhi
 TXN003,12000,Myntra,Bangalore
