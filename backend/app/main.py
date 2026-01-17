@@ -17,4 +17,4 @@ app.include_router(router)
 
 @app.get("/")
 def root():
-    return {"status": "Backend running successfully"}
+    return {"status": "Backend running successfully"}  
